@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="../assets/images/favicon_io/favicon.ico"
+    />
+    <link href="/css/style.css" rel="stylesheet" />
+    <title>Wer muss?</title>
+  </head>
+  <body class="bg-primary">
+    <header>
+      <nav class="relative container mx-auto py-2 pl-2">
+        <!-- LOGO -->
+        <div class="flex items-center justify-between">
+          <div>
+            <img
+              class="w-44 sm:w-64 lg:w-72"
+              src="../assets/images/logos/logo-small-tr.svg"
+              alt=""
+            />
+          </div>
+          <div class="hidden md:flex space-x-5 text-tertiarty font-bold">
+            <a
+              class="transition-colors duration-300 hover:text-cta2"
+              href="/index.html"
+              >Home</a
+            >
+            <a
+              class="transition-colors duration-300 hover:text-cta2"
+              href="pages/who.html"
+              >Wer muss?</a
+            >
+            <a
+              class="transition-colors duration-300 hover:text-cta2"
+              href="/pages/drink.html"
+              >Random Drink</a
+            >
+          </div>
+          <!-- Hamburger icon out of 3 spans -->
+          <div class="md:hidden">
+            <button
+              id="hamburger-btn"
+              class="flex flex-col justify-around w-12 h-12 p-3 text-gray-500 rounded-lg hover:text-gray-900 focus:outline-none focus:text-gray-900"
+            >
+              <span
+                id="hamburger-top"
+                class="w-6 h-0.5 bg-tertiarty rounded"
+              ></span>
+              <span
+                id="hamburger-mid"
+                class="w-6 h-0.5 bg-tertiarty rounded"
+              ></span>
+              <span
+                id="hamburger-bot"
+                class="w-6 h-0.5 bg-tertiarty rounded"
+              ></span>
+            </button>
+          </div>
+        </div>
+      </nav>
+      <!-- Dropdown menu of all three nav links -->
+      <div
+        id="hamburger-menu"
+        class="hidden flex-col items-center p-5 bg-secondary space-y-3 text-tertiarty m-3 rounded-lg"
+      >
+        <a href="/index.html">Home</a>
+        <a href="/pages/who.html">Wer muss?</a>
+        <a href="/pages/drink.html">Random Drink</a>
+      </div>
+    </header>
+    <main class="mt-10">
+      <!-- Question Entry -->
+      <section>
+        <div
+          class="container flex flex-col mx-auto bg-secondary rounded-xl p-10 text-center font-bold"
+        >
+          <label class="relative block text-left" id="label" for="who">
+            <span>Wer muss...</span>
+            <input
+              class="placeholder:italic placeholder:text-slate-400 w-full rounded-md py-2 pl-4 pr-3 shadow-sm focus:outline-none focus:border-cta focus:ring-cta focus:ring-1 sm:text-sm"
+              placeholder="z.B. bei Ali anrufen?"
+              type="text"
+              name="who"
+              id="who"
+            />
+          </label>
+          <div class="py-3 text-center md:text-left">
+            <button
+              type="submit"
+              id="submit"
+              class="inline-flex justify-center rounded-md border border-transparent bg-cta py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-cta2 focus:outline-none focus:ring-2 focus:ring-cta focus:ring-offset-2"
+            >
+              Starten
+            </button>
+          </div>
+          <h1 class="hidden text-4xl text-tertiarty" id="question"></h1>
+        </div>
+      </section>
+      <!-- Names Section -->
+      <section class="hidden" id="nameSection">
+        <div class="container flex flex-col mx-auto py-8 px-2 font-bold">
+          <h2 class="text-tertiarty text-3xl">Namen</h2>
+        </div>
+        <div
+          class="container flex flex-col md:flex-row space-y-2 md:space-x-2 mx-auto py-8 px-2"
+        >
+          <div id="namesContainer" class="flex flex-col md:w-full space-y-3">
+            <label
+              class="relative block text-left"
+              id="label-name1"
+              for="name1"
+            >
+              <span class="text-lg text-tertiarty font-bold">Name 1</span>
+              <input
+                class="placeholder:italic placeholder:text-slate-400 w-full rounded-md py-2 pl-4 pr-3 shadow-sm focus:outline-none focus:border-cta focus:ring-cta focus:ring-1 sm:text-sm"
+                placeholder="Namen eingeben..."
+                type="text"
+                name="name1"
+                id="name1"
+              />
+            </label>
+            <label
+              class="relative block text-left"
+              id="label-name2"
+              for="name2"
+            >
+              <span class="text-lg text-tertiarty font-bold">Name 2</span>
+              <input
+                class="placeholder:italic placeholder:text-slate-400 w-full rounded-md py-2 pl-4 pr-3 shadow-sm focus:outline-none focus:border-cta focus:ring-cta focus:ring-1 sm:text-sm"
+                placeholder="Namen eingeben..."
+                type="text"
+                name="name2"
+                id="name2"
+              />
+            </label>
+            <label
+              class="relative block text-left"
+              id="label-name3"
+              for="name3"
+            >
+              <span class="text-lg text-tertiarty font-bold">Name 3</span>
+              <input
+                class="placeholder:italic placeholder:text-slate-400 w-full rounded-md py-2 pl-4 pr-3 shadow-sm focus:outline-none focus:border-cta focus:ring-cta focus:ring-1 sm:text-sm"
+                placeholder="Namen eingeben..."
+                type="text"
+                name="name3"
+                id="name3"
+              />
+            </label>
+          </div>
+        </div>
+
+        <div class="container flex mx-auto py-3 justify-between">
+          <button
+            type="button"
+            id="addName"
+            class="inline-flex justify-center rounded-md border border-transparent bg-cta py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-cta2 focus:outline-none focus:ring-2 focus:ring-cta focus:ring-offset-2"
+          >
+            +
+          </button>
+          <button
+            type="button"
+            id="startRaffle"
+            class="inline-flex justify-center rounded-md border border-transparent bg-cta py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-cta2 focus:outline-none focus:ring-2 focus:ring-cta focus:ring-offset-2"
+          >
+            Auslosung starten
+          </button>
+        </div>
+      </section>
+    </main>
+    <script src="../js/main.js"></script>
+    <script src="../js/who.js"></script>
+  </body>
+</html>
