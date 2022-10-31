@@ -1,5 +1,5 @@
 
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+![Namecheap-72](https://user-images.githubusercontent.com/84287747/199046954-3db166f2-0f0b-4a8f-8fde-765da1b02478.svg)
 
 
 # The Squad App
