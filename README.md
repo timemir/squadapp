@@ -17,10 +17,10 @@ A WebApp for the boys.
 
 ## Demo
 
-Check it out live
+[Check it out live](https://thesquadapp.netlify.app/)
 
 ```bash
-  thesquadapp.netlify.app
+thesquadapp.netlify.app
 ```
 
 ## Authors
