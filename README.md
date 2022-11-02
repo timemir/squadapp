@@ -1,5 +1,5 @@
 
-![Namecheap-72](https://user-images.githubusercontent.com/84287747/199046954-3db166f2-0f0b-4a8f-8fde-765da1b02478.svg)
+![LOGO](https://user-images.githubusercontent.com/84287747/199046954-3db166f2-0f0b-4a8f-8fde-765da1b02478.svg)
 
 
 # The Squad App
