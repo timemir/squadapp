@@ -1832,15 +1832,15 @@ video {
 }
 
 .bg-\[url\(\/assets\/images\/backgrounds\/justdoit\.webp\)\] {
-  background-image: url(/assets/images/backgrounds/justdoit.webp);
+  background-image: url(../assets/images/backgrounds/justdoit.webp);
 }
 
 .bg-\[url\(\/assets\/images\/backgrounds\/cocktails\.jpg\)\] {
-  background-image: url(/assets/images/backgrounds/cocktails.jpg);
+  background-image: url(../assets/images/backgrounds/cocktails.jpg);
 }
 
 .bg-\[url\(\/assets\/images\/backgrounds\/wichtel\.png\)\] {
-  background-image: url(/assets/images/backgrounds/wichtel.png);
+  background-image: url(../assets/images/backgrounds/wichtel.png);
 }
 
 .bg-\[url\(\$\{drink\.image\}\)\] {

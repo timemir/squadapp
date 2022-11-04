@@ -1,0 +1,213 @@
+
+  
+  h1 {
+    text-align: center;
+    font-size: 5em;
+    margin-bottom: .5em;
+    animation-duration: 10s;
+    animation-iteration-count: 10;
+  }
+  
+  .subTitle {
+    text-align: center;
+    font-size: 3em;
+    color: #ffffff;
+    margin-top: -.5em;
+    margin-bottom: 1em;
+    animation-duration: 10s;
+    animation-iteration-count: 10;
+  }
+  
+  .moreInfo {
+    text-align: center;
+    font-size: 3em;
+    margin-top: .2em;
+    margin-bottom: .5em;
+  }
+  
+  p {
+    padding-left: 2em;
+    padding-right: 1em;
+    line-height: 1.5em;
+    font-size: 22px;
+    margin-top: .2em;
+    margin-bottom: .2em;
+  }
+  
+  
+  img {
+    width: 25%;
+    height:25%
+  }
+  
+  .gameButtons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+  }
+  
+  #modal {
+      background-color: rgba(0,0,0,0.4);
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+    display: none;
+      overflow: auto;
+  }
+  
+  #modal-textbox {
+      background-color: white;
+      height: 900px;
+      width: 650px;
+      border-radius: 2px;
+      margin: 150px auto;
+      box-shadow: 0 2px 2px #000000;
+  }
+  
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  .gameButton {
+    width: 15%;
+    height: 15%;
+    background-color: darkred;
+    color: white;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+    font-size: 1em;
+    border-radius: 1em;
+  }
+  
+  #close {
+    width: 55px;
+    height: 40px;
+    background-color: darkred;
+    text-align: center;
+    color: white;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    margin-right: 1em;
+    padding: .5em;
+    padding-right: 1em;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+  
+  .gameTable {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-around;
+  }
+  
+  /* .flipper {
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  .gameCardBack:hover .flipper {
+      transform: rotateY(180deg);
+  }
+  .gameCard, .gameCardBack {
+    backface-visibility: hidden;
+  } */
+  
+  .gameCard {
+    width: 20%;
+    height: 20%;
+    padding: 5px;
+  }
+  
+  .gameCardBack{
+    width: 20%;
+    height: 20%;
+    padding: 5px;
+  }
+  
+  .cardInfo {
+    width: 80%;
+    height:80%;
+  }
+  
+  /* carousel css html and javascript taken from class example and edited for use */
+  .carousel-container {
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding-left: 8em;
+  }
+  .carousel-images {
+    width: 80%;
+    background: #FFFFFF;
+    padding: 10px;
+    border-radius: 10px;
+    box-sizing: border-box;
+    box-shadow: 2px 2px #000000;
+  }
+  .carousel-images img {
+    width: 100%;
+    border-radius: 10px;
+    display: none;
+  }
+  
+  .carousel-images img:first-of-type{
+    display: block;
+  }
+  
+  .carousel-button {
+    align-self: center;
+    background: darkred;
+    color: #FFFFFF;
+    padding: .5em;
+    margin-left: .5em;
+    margin right: .5em;
+    border-radius: 20%;
+    text-align: center;
+    box-shadow: 1px 1px #000000;
+  }
+  .carousel-button:hover {
+    cursor: pointer;
+    background: #fa8d8e;
+    box-shadow: 1px 1px #f2cd99;
+    color: white;
+  }
+  
+  .gameButton:hover {
+    cursor: pointer;
+    background: #dd4420;
+  }
+  
+  .cardRule {
+    font-size: 22px;
+    margin-bottom: .5em;
+    margin-top: .5em;
+  }
+  
+  
+  /* animations taken from class example for added text pop */
+  @keyframes rainbow {
+    0% { color: black; }
+    10% { color: crimson; }
+    25% { color: hotpink;}
+    30% { color: coral;}
+    40% { color: lightyellow; }
+    50% { color: palegreen; }
+    60% { color: mediumaquamarine; }
+    75% { color: steelblue; }
+    80% { color: darkviolet;}
+    90% { color: black; }
+    100% { color: ghostwhite; }
+  }

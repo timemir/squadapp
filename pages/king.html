@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -9,103 +9,133 @@
       type="image/x-icon"
       href="../assets/images/favicon_io/favicon.ico"
     />
-    <link href="../css/style.css" rel="stylesheet" />
-    <title>Random Drink</title>
+
+    <link rel="stylesheet" href="../css/styleking.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous">
+    </script>
+    <title>King's Cup</title>
   </head>
+
   <body class="bg-primary">
+
     <header>
-      <nav class="relative container mx-auto py-2 pl-2">
-        <!-- LOGO -->
-        <div class="flex items-center justify-between">
-          <div>
-            <img
-              class="w-44 sm:w-64 lg:w-72"
-              src="../assets/images/logos/logo-small-tr.svg"
-              alt=""
-            />
-          </div>
-          <div class="hidden md:flex space-x-5 text-tertiarty font-bold">
-            <a
+        <nav class="relative container mx-auto py-2 pl-2">
+          <!-- LOGO -->
+          <div class="flex items-center justify-between">
+            <div>
+              <img
+                class="w-44 sm:w-64 lg:w-72"
+                src="../assets/images/logos/logo-small-tr.svg"
+                alt=""
+              />
+            </div>
+            <div class="hidden md:flex space-x-5 text-tertiarty font-bold">
+              <a
+                class="transition-colors duration-300 hover:text-cta2"
+                href="../index.html"
+                >Home</a
+              >
+              <a
+                class="transition-colors duration-300 hover:text-cta2"
+                href="./who.html"
+                >Wer muss?</a
+              >
+              <a
+                class="transition-colors duration-300 hover:text-cta2"
+                href="./drink.html"
+                >Random Drink</a
+              >
+              <a
               class="transition-colors duration-300 hover:text-cta2"
-              href="../index.html"
-              >Home</a
-            >
-            <a
-              class="transition-colors duration-300 hover:text-cta2"
-              href="./who.html"
-              >Wer muss?</a
-            >
-            <a
-              class="transition-colors duration-300 hover:text-cta2"
-              href="./drink.html"
-              >Random Drink</a
-            >
-            <a
-            class="transition-colors duration-300 hover:text-cta2"
-            href="./king.html"
-            >King's Cup</a
-            >
+              href="./king.html"
+              >King's Cup</a
+              >
+            </div>
+            <!-- Hamburger icon out of 3 spans -->
+            <div class="md:hidden">
+              <button
+                id="hamburger-btn"
+                class="flex flex-col justify-around w-12 h-12 p-3 text-gray-500 rounded-lg hover:text-gray-900 focus:outline-none focus:text-gray-900"
+              >
+                <span
+                  id="hamburger-top"
+                  class="w-6 h-0.5 bg-tertiarty rounded"
+                ></span>
+                <span
+                  id="hamburger-mid"
+                  class="w-6 h-0.5 bg-tertiarty rounded"
+                ></span>
+                <span
+                  id="hamburger-bot"
+                  class="w-6 h-0.5 bg-tertiarty rounded"
+                ></span>
+              </button>
+            </div>
           </div>
-          <!-- Hamburger icon out of 3 spans -->
-          <div class="md:hidden">
-            <button
-              id="hamburger-btn"
-              class="flex flex-col justify-around w-12 h-12 p-3 text-gray-500 rounded-lg hover:text-gray-900 focus:outline-none focus:text-gray-900"
-            >
-              <span
-                id="hamburger-top"
-                class="w-6 h-0.5 bg-tertiarty rounded"
-              ></span>
-              <span
-                id="hamburger-mid"
-                class="w-6 h-0.5 bg-tertiarty rounded"
-              ></span>
-              <span
-                id="hamburger-bot"
-                class="w-6 h-0.5 bg-tertiarty rounded"
-              ></span>
-            </button>
-          </div>
-        </div>
-      </nav>
-      <!-- Dropdown menu of all three nav links -->
-      <div
-        id="hamburger-menu"
-        class="hidden flex-col items-center p-5 bg-secondary space-y-3 text-tertiarty m-3 rounded-lg"
-      >
-        <a href="../index.html">Home</a>
-        <a href="./who.html">Wer muss?</a>
-        <a href="./drink.html">Random Drink</a>
-        <a href="./king.html">King's Cup</a>
-      </div>
-    </header>
-    <main class="mt-10">
-      <!-- Question Entry -->
-      <section>
+        </nav>
+        <!-- Dropdown menu of all three nav links -->
         <div
+          id="hamburger-menu"
+          class="hidden flex-col items-center p-5 bg-secondary space-y-3 text-tertiarty m-3 rounded-lg"
+        >
+          <a href="../index.html">Home</a>
+          <a href="./who.html">Wer muss?</a>
+          <a href="./drink.html">Random Drink</a>
+          <a href="./king.html">King's Cup</a>
+        </div>
+      </header>
+
+    <div>
+      <h2 class="subTitle">King's Cup</h2>
+      <div
           class="container flex flex-col mx-auto items-center bg-secondary rounded-xl p-10 text-center font-bold"
         >
-            <button
-            type="submit"
-            id="draw"
-            class="inline-flex justify-center rounded-md border border-transparent bg-cta py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-cta2 focus:outline-none focus:ring-2 focus:ring-cta focus:ring-offset-2"
-        >
-            Karte ziehen
-        </button>
+        <div class="gameButtons">
+        <!-- modal and carousel taken from class example and edited for use -->
+            <div id="modal">
+                <div id="modal-textbox">
+                    <button id="close">Close</button>
+                    <!-- Title: -->
+                    <h2 class="moreInfo">The Rules of King's Cup:</h2>
+                    <!-- Rules & Info: -->
+                    <p>The name of the game is simplicity here folks! Pick a card, play the rule, and drink! Whoever draws the fourth King loses, or wins depending on how you view it. Click on the various cards to learn the rule for each:</p>
+                    <!-- Carousel of Cards: -->
+                    <div class="container">
+
+                        <div class="carousel-container">
+
+                            <div class="carousel-button previous">
+                                 <
+                                <span class="lnr lnr-chevron-left"></span>
+                            </div>
+
+                            <div class="carousel-images"></div>
+
+                            <div class="carousel-button next">
+                                >
+                                <span class="lnr lnr-chevron-right"></span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </section>
+      </div>
+    </div>
 
-      <div
-          class="container flex flex-col md:flex-row space-y-2 md:space-x-2 mx-auto py-8 px-2"
-        >
-          <div id="cardContainer" class="flex flex-col md:w-full space-y-3">
-            
-          </div>
-        </div>
 
-    </main>
+    <div class="gameTable">
+      <div class="flipper">
 
-    <script src="../js/main.js"></script>
-    <script src="../js/king.js"></script>
+      </div>
+    </div>
+
+    <script src="../js/king.js" charset="utf-8"></script>
+    
+
   </body>
 </html>
