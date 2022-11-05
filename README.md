@@ -19,6 +19,20 @@ A WebApp for the boys.
 thesquadapp.netlify.app
 ```
 
+## Installation
+
+1. Clone the repo and then run:
+
+```bash
+  npm install
+```
+
+2. To get Tailwind to work run the following
+```bash
+  npm run watch
+```
+
+
 ## Authors
 
 - [@timemir](https://www.github.com/timemir)
