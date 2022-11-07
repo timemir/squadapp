@@ -10,7 +10,7 @@
       href="../assets/images/favicon_io/favicon.ico"
     />
     <link href="../css/style.css" rel="stylesheet" />
-    <title>Random Drink</title>
+    <title>Deine Favoriten</title>
   </head>
   <body class="bg-primary mx-2">
     <header>
@@ -77,67 +77,28 @@
       <!-- Question Entry -->
       <section>
         <div
-          class="container flex flex-row justify-between mx-auto items-center bg-secondary rounded-xl p-10 text-center font-bold"
+          class="container flex flex-row mx-auto items-center bg-secondary rounded-xl p-10 text-center font-bold"
         >
-          <button
-            type="button"
-            id="randomDrinkButton"
-            class="inline-flex justify-center rounded-md border border-transparent bg-cta py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-cta2 focus:outline-none focus:ring-2 focus:ring-cta focus:ring-offset-2"
-          >
-            Neuer Drink
-          </button>
-          <a href="./drinkFav.html">
+          <a href="./drink.html">
             <button
               type="button"
               id="randomDrinkButton"
               class="inline-flex justify-center rounded-md border border-transparent bg-cta py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-cta2 focus:outline-none focus:ring-2 focus:ring-cta focus:ring-offset-2"
             >
-              Deine Favoriten
+              Zurück
             </button>
           </a>
         </div>
       </section>
       <section>
-        <div class="container flex flex-col mx-auto py-8 px-2">
-          <h2 class="text-tertiarty text-3xl">Dein Drink für heute:</h2>
-        </div>
-        <div id="favArea">
-          <button
-            type="button"
-            id="addToFavorites"
-            class="inline-flex justify-center rounded-md border border-transparent bg-cta py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-cta2 focus:outline-none focus:ring-2 focus:ring-cta focus:ring-offset-2"
-          >
-            Add to Favorites
-          </button>
-        </div>
-
         <div
-          class="container flex flex-col md:flex-row space-y-2 md:space-x-2 mx-auto py-8 px-2"
-        >
-          <!-- Cocktail Details -->
-          <div class="flex flex-col">
-            <h2
-              id="drinkName"
-              class="text-tertiarty text-3xl text-center md:text-left font-bold mb-5"
-            ></h2>
-            <div
-              class="flex flex-col items-center md:items-start h-auto md:h-64 xl:h-72 w-full mt-2 rounded-lg overflow-hidden justify-center md:flex-row"
-            >
-              <img
-                class="h-52 md:h-64 xl:h-72 rounded-lg"
-                id="drinkBgImage"
-                src=""
-                alt=""
-              />
-              <div id="drinkIngredientsList" class="md:mx-8 font-serif"></div>
-              <div id="drinkInstructions" class="mt-10 md:mt-0 mx-5"></div>
-            </div>
-          </div>
-        </div>
+          id="contentWrapper"
+          class="container flex flex-col space-y-2 md:space-x-2 mx-auto py-8 px-2"
+        ></div>
       </section>
     </main>
 
     <script src="../js/main.js"></script>
-    <script src="../js/drink.js"></script>
+    <script src="../js/drinkFav.js"></script>
   </body>
 </html>
