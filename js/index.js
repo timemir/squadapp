@@ -13,12 +13,12 @@ function fetchMOTD() {
   };
 
   fetch(
-    `https://numbersapi.p.rapidapi.com/${today.month}/${today.day}/date?fragment=false&json=false`,
+    `https://numbersapi.p.rapidapi.com/${today.month}/${today.day}/date`,
     options
   )
-    .then((response) => response.json())
+    .then((response) => response.text())
     .then((data) => {
-      motd.innerText = data.text;
+      motd.innerText = data;
     })
     .catch((error) => {
       console.log(error);
