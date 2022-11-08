@@ -1,15 +1,17 @@
-const question = document.getElementById("question");
+// Buttons
 const startButton = document.getElementById("submit");
-const userEntry = document.getElementById("who");
-const label = document.getElementById("label");
-const nameSection = document.getElementById("nameSection");
-
-const namesContainer = document.getElementById("namesContainer");
 const addNameButton = document.getElementById("addName");
 const startRaffleButton = document.getElementById("startRaffle");
 const squadAutofillButton = document.getElementById("squadAutofill");
 
-startButton.addEventListener("click", () => {
+// globals
+const question = document.getElementById("question");
+const userEntry = document.getElementById("who");
+const nameSection = document.getElementById("nameSection");
+let nameCounter = 3;
+
+function startGame() {
+  const label = document.getElementById("label");
   // check if user has entered something to userEntry
   if (userEntry.value === "") {
     alert("Bitte gib etwas ein!");
@@ -20,10 +22,11 @@ startButton.addEventListener("click", () => {
     startButton.classList.toggle("hidden");
     nameSection.classList.toggle("hidden");
   }
-});
+}
 
 function createNamefield(c) {
   c++;
+  const namesContainer = document.getElementById("namesContainer");
   const newLabel = document.createElement("label");
   const newSpan = document.createElement("span");
   const newInput = document.createElement("input");
@@ -49,10 +52,7 @@ function createNamefield(c) {
   newLabel.appendChild(newInput);
 }
 
-let nameCounter = 3;
-addNameButton.addEventListener("click", () => createNamefield(nameCounter));
-
-startRaffleButton.addEventListener("click", () => {
+function getWinner() {
   // powerful css selector to get all input fields with name starting with "name"
   const nameFields = document.querySelectorAll("input[name^='name']");
   let allFilled = true;
@@ -75,9 +75,12 @@ startRaffleButton.addEventListener("click", () => {
   } else {
     alert("Bitte alle Namen eingeben!");
   }
-});
+}
 
-squadAutofillButton.addEventListener("click", () => {
+function autoFillSquadMembers() {
+  // disable squadAutofillButton so it can only pressed once
+  squadAutofillButton.disabled = true;
+
   const squadNames = [
     "Tim",
     "Roman",
@@ -101,4 +104,10 @@ squadAutofillButton.addEventListener("click", () => {
   for (let i = 1; i <= squadNames.length; i++) {
     document.getElementById(`name${i}`).value = squadNames[i - 1];
   } // -1 because the array starts at 0
-});
+}
+
+// Event listeners
+squadAutofillButton.addEventListener("click", autoFillSquadMembers);
+startRaffleButton.addEventListener("click", getWinner);
+addNameButton.addEventListener("click", () => createNamefield(nameCounter));
+startButton.addEventListener("click", startGame);

@@ -6,6 +6,7 @@ let drink = {
   instructions: "",
   image: "",
 };
+// TODO: Refactor this mess and apply OOP
 async function getDrink() {
   const drinkBgImage = document.getElementById("drinkBgImage");
   const drinkName = document.getElementById("drinkName");
@@ -72,7 +73,6 @@ async function getDrink() {
     })
     .catch((err) => console.error(err));
 }
-
 getDrink();
 
 function addToFavorites(currentDrink) {
@@ -82,11 +82,12 @@ function addToFavorites(currentDrink) {
 
   localStorage.setItem("fav", JSON.stringify(oldItems));
 }
-// Simple function to reload the page
-randomDrinkButton.addEventListener("click", () => {
+
+function reloadPage() {
   location.reload();
-});
-addToFavoritesButton.addEventListener("click", () => {
+}
+
+function handleAddToFavorites() {
   // Create a Check if the drink is already in local storage inside fav
   const oldItems = JSON.parse(localStorage.getItem("fav")) || [];
   const isAlreadyInFav = oldItems.some((item) => item.name === drink.name);
@@ -111,4 +112,8 @@ addToFavoritesButton.addEventListener("click", () => {
     favArea.appendChild(hint);
     addToFavoritesButton.classList.add("hidden");
   }
-});
+}
+
+// Event listeners
+randomDrinkButton.addEventListener("click", reloadPage);
+addToFavoritesButton.addEventListener("click", handleAddToFavorites);

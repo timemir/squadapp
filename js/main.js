@@ -1,11 +1,12 @@
 const navButton = document.getElementById("hamburger-btn");
-const navMenu = document.getElementById("hamburger-menu");
 
-const hamTop = document.getElementById("hamburger-top");
-const hamMid = document.getElementById("hamburger-mid");
-const hamBot = document.getElementById("hamburger-bot");
+function toggleHamburgerMenu() {
+  // DOM Elements
+  const navMenu = document.getElementById("hamburger-menu");
+  const hamTop = document.getElementById("hamburger-top");
+  const hamMid = document.getElementById("hamburger-mid");
+  const hamBot = document.getElementById("hamburger-bot");
 
-navButton.addEventListener("click", () => {
   // Toggle hamburger menu
   navMenu.classList.toggle("hidden");
   navMenu.classList.toggle("flex");
@@ -30,4 +31,7 @@ navButton.addEventListener("click", () => {
   hamMid.classList.toggle("opacity-0");
   hamBot.classList.toggle("-rotate-45");
   hamBot.classList.toggle("-translate-y-2");
-});
+}
+
+// Event listeners
+navButton.addEventListener("click", toggleHamburgerMenu);

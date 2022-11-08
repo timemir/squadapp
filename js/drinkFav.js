@@ -73,7 +73,6 @@ function displayFavs(favDrinks) {
     drinkInstructionsList.appendChild(ol);
   }
 }
-
+// Execution
 const favDrinks = getLocalFavorites();
-
 displayFavs(favDrinks);
