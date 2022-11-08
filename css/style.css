@@ -852,12 +852,6 @@ video {
   height: auto;
 }
 
-.h-max {
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-}
-
 .w-44 {
   width: 11rem;
 }
@@ -872,12 +866,6 @@ video {
 
 .w-full {
   width: 100%;
-}
-
-.w-max {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
 }
 
 .flex-shrink {
@@ -1851,18 +1839,6 @@ video {
   background-image: url(/assets/images/backgrounds/wichtel.png);
 }
 
-.bg-\[url\(\$\{favDrinks\.image\}\)\] {
-  background-image: url(${favDrinks.image});
-}
-
-.bg-\[url\(\$\{favDrinks\[0\]\.image\}\)\] {
-  background-image: url(${favDrinks[0].image});
-}
-
-.bg-\[url\(\$\{favDrinks\[i\]\.image\}\)\] {
-  background-image: url(${favDrinks[i].image});
-}
-
 .decoration-slice {
   -webkit-box-decoration-break: slice;
           box-decoration-break: slice;
@@ -2201,6 +2177,16 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-red-500 {
+  --tw-text-opacity: 1;
+  color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.text-green-500 {
+  --tw-text-opacity: 1;
+  color: rgb(34 197 94 / var(--tw-text-opacity));
+}
+
 .text-cta {
   --tw-text-opacity: 1;
   color: rgb(239 35 60 / var(--tw-text-opacity));
@@ -2213,16 +2199,6 @@ video {
 .text-blue-500 {
   --tw-text-opacity: 1;
   color: rgb(59 130 246 / var(--tw-text-opacity));
-}
-
-.text-green-500 {
-  --tw-text-opacity: 1;
-  color: rgb(34 197 94 / var(--tw-text-opacity));
-}
-
-.text-red-500 {
-  --tw-text-opacity: 1;
-  color: rgb(239 68 68 / var(--tw-text-opacity));
 }
 
 .underline {
@@ -2760,6 +2736,10 @@ video {
 
   .md\:items-start {
     align-items: flex-start;
+  }
+
+  .md\:justify-between {
+    justify-content: space-between;
   }
 
   .md\:space-x-1 > :not([hidden]) ~ :not([hidden]) {
