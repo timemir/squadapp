@@ -31,7 +31,13 @@ thesquadapp.netlify.app
 ```bash
   npm run watch
 ```
+## Optimizations
 
+Applied OOP principles to enhance readability and performance. Still ongoing! 
+
+## Lessons Learned:
+
+Working on basic vanilla DOM manipulation helped me to build a fundamental understanding of the web. It also lets me appreciate the work of countless frameworks that made it easier and increased the overall DX.
 
 ## Authors
 
