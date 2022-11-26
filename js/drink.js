@@ -1,21 +1,21 @@
-const drinkBgImage = document.getElementById("drinkBgImage");
-const drinkName = document.getElementById("drinkName");
-const drinkIngredientsList = document.getElementById("drinkIngredientsList");
-const drinkInstructions = document.getElementById("drinkInstructions");
-const randomDrinkButton = document.getElementById("randomDrinkButton");
+const drinkBgImage = document.getElementById('drinkBgImage');
+const drinkName = document.getElementById('drinkName');
+const drinkIngredientsList = document.getElementById('drinkIngredientsList');
+const drinkInstructions = document.getElementById('drinkInstructions');
+const randomDrinkButton = document.getElementById('randomDrinkButton');
 const options = {
-  method: "GET",
+  method: 'GET',
   headers: {},
 };
 
-let drink = {
-  name: "",
+const drink = {
+  name: '',
   ingredients: [],
-  instructions: "",
-  image: "",
+  instructions: '',
+  image: '',
 };
 
-fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php", options)
+fetch('https://www.thecocktaildb.com/api/json/v1/1/random.php', options)
   .then((response) => response.json())
   .then((response) => {
     // Setting drink object
@@ -30,9 +30,7 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php", options)
           drink.ingredients.push(response.drinks[0][`strIngredient${i}`]);
         } else {
           drink.ingredients.push(
-            `${response.drinks[0][`strMeasure${i}`]}- ${
-              response.drinks[0][`strIngredient${i}`]
-            }`
+            `${response.drinks[0][`strMeasure${i}`]}- ${response.drinks[0][`strIngredient${i}`]}`,
           );
         }
       }
@@ -40,28 +38,28 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php", options)
     // ----------------------------
     // Setting the DOM
     drinkName.innerHTML = drink.name;
-    drinkBgImage.setAttribute("src", drink.image);
+    drinkBgImage.setAttribute('src', drink.image);
 
     // -------- Ingredients list
-    const ul = document.createElement("ul");
-    ul.classList.add("list-disc");
+    const ul = document.createElement('ul');
+    ul.classList.add('list-disc');
     drink.ingredients.forEach((ingredient) => {
-      const li = document.createElement("li");
+      const li = document.createElement('li');
       // Add tailwind styling
-      li.classList.add("text-white", "text-lg", "mb-2");
+      li.classList.add('text-white', 'text-lg', 'mb-2');
       li.innerHTML = ingredient;
       ul.appendChild(li);
     });
     drinkIngredientsList.appendChild(ul);
 
     // --------Instructions
-    const instructionsArray = drink.instructions.split(".");
-    const ol = document.createElement("ol");
-    ol.classList.add("list-decimal");
+    const instructionsArray = drink.instructions.split('.');
+    const ol = document.createElement('ol');
+    ol.classList.add('list-decimal');
     instructionsArray.forEach((instruction) => {
       if (instruction) {
-        const li = document.createElement("li");
-        li.classList.add("text-white", "text-lg", "mb-2");
+        const li = document.createElement('li');
+        li.classList.add('text-white', 'text-lg', 'mb-2');
         li.innerHTML = instruction;
         ol.appendChild(li);
       }
@@ -72,6 +70,6 @@ fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php", options)
   .catch((err) => console.error(err));
 
 // Simple function to reload the page
-randomDrinkButton.addEventListener("click", () => {
+randomDrinkButton.addEventListener('click', () => {
   location.reload();
 });
