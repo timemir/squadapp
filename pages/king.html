@@ -88,54 +88,25 @@
         </div>
       </header>
 
-    <div>
-      <h2 class="subTitle">King's Cup</h2>
-      <div
-          class="container flex flex-col mx-auto items-center bg-secondary rounded-xl p-10 text-center font-bold"
-        >
-        <div class="gameButtons">
-        <!-- modal and carousel taken from class example and edited for use -->
-            <div id="modal">
-                <div id="modal-textbox">
-                    <button id="close">Close</button>
-                    <!-- Title: -->
-                    <h2 class="moreInfo">The Rules of King's Cup:</h2>
-                    <!-- Rules & Info: -->
-                    <p>The name of the game is simplicity here folks! Pick a card, play the rule, and drink! Whoever draws the fourth King loses, or wins depending on how you view it. Click on the various cards to learn the rule for each:</p>
-                    <!-- Carousel of Cards: -->
-                    <div class="container">
+      <div class="relative-container m-3 rounded-xl bg-secondary p-10 text-center font-bold">
+        <h1 class="text-3xl text-tertiarty" id="output">King's Cup</h1>
+      </div>
 
-                        <div class="carousel-container">
+      <div class="relative-container m-3 rounded-xl bg-secondary p-10 text-center font-bold">
+        <p id="text"></p>
+      </div>
 
-                            <div class="carousel-button previous">
-                                 <
-                                <span class="lnr lnr-chevron-left"></span>
-                            </div>
-
-                            <div class="carousel-images"></div>
-
-                            <div class="carousel-button next">
-                                >
-                                <span class="lnr lnr-chevron-right"></span>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <div id="tabletop">
+        <div class="flex relative-container m-3 justify-between" id="row">
+          <img class="card" src="https://deckofcardsapi.com/static/img/back.png" alt="Picture of card">
+          <img class="card" src="https://deckofcardsapi.com/static/img/back.png" alt="Picture of card">
         </div>
       </div>
-    </div>
 
-
-    <div class="gameTable">
-      <div class="flipper">
-
-      </div>
-    </div>
-
-    <script src="../js/king.js" charset="utf-8"></script>
+      <button class="flex relative-container rounded-md bg-red-600 hover:bg-white p-3 mx-auto" id="button">Restart Game!</button>
     
-
+    <script src="../js/main.js"></script>
+    <script src="../js/king.js"></script>
+    
   </body>
 </html>

@@ -2649,6 +2649,16 @@ video {
   text-align: center;
 }
 
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-white:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
 @media (min-width: 480px) {
   .sm\:container {
     width: 100%;
@@ -2789,3 +2799,4 @@ video {
     height: 18rem;
   }
 }
+
